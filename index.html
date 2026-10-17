@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10130f">
+  <meta name="description" content="TrickTime — Minecraft-сервер. Играй с друзьями, предлагай идеи и обращайся к администрации.">
+  <title>TrickTime — Minecraft сервер</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#10130f;--panel:#191e18;--panel2:#20271e;--text:#f3f6ee;--muted:#a8b3a0;--green:#a7f36b;--green2:#72c943;--line:#303b2b;--red:#ff7777}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#2a4323 0,transparent 44%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(16,19,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff0d}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:28px 'Russo One',sans-serif;letter-spacing:.3px}.brand span{color:var(--green)}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px;font-weight:600}.navlinks a:hover{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:10px;border:1px solid transparent;font-weight:800;font-size:14px;cursor:pointer;transition:.2s}
+    .btn-primary{background:var(--green);color:#14200d;box-shadow:0 7px 24px #a7f36b20}.btn-primary:hover{background:#bcff8a;transform:translateY(-2px)}
+    .btn-ghost{border-color:var(--line);background:#ffffff05}.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+    .hero{padding:94px 0 76px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px;min-height:550px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 11px;border:1px solid #a7f36b35;border-radius:99px;background:#a7f36b0c;color:var(--green);font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+    .dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}
+    h1{font:clamp(46px,6.5vw,78px)/1.03 'Russo One',sans-serif;letter-spacing:-1.5px;margin:22px 0 20px}h1 em{font-style:normal;color:var(--green)}
+    .lead{color:var(--muted);font-size:17px;max-width:550px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+    .server-status{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:13px;margin-top:26px}.server-status strong{color:var(--text)}
+    .scene{position:relative;min-height:340px;display:grid;place-items:center}.scene-glow{position:absolute;width:290px;height:290px;background:#75cf3c24;filter:blur(60px);border-radius:50%}
+    .cube-card{position:relative;width:min(100%,390px);aspect-ratio:1/1;border:1px solid #a7f36b35;border-radius:28px;background:linear-gradient(145deg,#283b22,#151b13 70%);overflow:hidden;display:grid;place-items:center;box-shadow:0 35px 90px #0008}
+    .grid-bg{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(black,transparent)}
+    .pixel-art{position:relative;width:210px;height:220px;filter:drop-shadow(0 18px 22px #0008)}
+    .block{position:absolute;width:62px;height:62px;border:3px solid #0c120b;box-shadow:inset -9px -9px #0002,inset 8px 8px #ffffff0b}
+    .b1{left:72px;top:10px;background:#8dbe63}.b2{left:10px;top:72px;background:#456c35}.b3{left:72px;top:72px;background:#628f45}.b4{left:134px;top:72px;background:#35572b}.b5{left:72px;top:134px;background:#6e9e4e}.b6{left:10px;top:134px;background:#3b5b2d}.b7{left:134px;top:134px;background:#89b75d}
+    .floating{position:absolute;right:17px;bottom:24px;padding:12px 15px;border:1px solid var(--line);background:#11170feF;border-radius:12px;font-size:12px;color:var(--muted);box-shadow:0 12px 35px #0005}.floating b{display:block;color:var(--green);font-size:15px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-bottom:76px}.stat{padding:20px;border:1px solid var(--line);background:#ffffff04;border-radius:14px}.stat b{display:block;font:24px 'Russo One',sans-serif}.stat span{font-size:12px;color:var(--muted)}
+    section{padding:58px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.kicker{color:var(--green);font-size:11px;letter-spacing:1.7px;font-weight:800;text-transform:uppercase}.section-head h2{font:clamp(30px,4vw,42px)/1.15 'Russo One',sans-serif;margin:8px 0 0}.section-head p{max-width:400px;color:var(--muted);font-size:14px;margin:0}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feature{padding:22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,#1c2419,#151a13);transition:.2s}.feature:hover{transform:translateY(-4px);border-color:#a7f36b70}.icon{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:#a7f36b16;color:var(--green);font-size:21px;margin-bottom:18px}.feature h3{margin:0 0 8px;font-size:16px}.feature p{margin:0;color:var(--muted);font-size:13px}
+    .forms-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;align-items:start}.form-aside{padding:27px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(160deg,#263820,#171e14)}.form-aside h3{font:25px 'Russo One',sans-serif;margin:10px 0}.form-aside p{color:var(--muted);font-size:14px}.aside-note{margin-top:25px;padding-top:18px;border-top:1px solid #ffffff18;color:#c7d3bf;font-size:12px}
+    .form-card{padding:26px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}.tab{border:1px solid var(--line);background:transparent;color:var(--muted);padding:10px 12px;border-radius:9px;font:600 12px Inter;cursor:pointer}.tab.active{background:var(--green);border-color:var(--green);color:#14200d}
+    .form-title{font-size:21px;margin:0 0 5px}.form-desc{font-size:13px;color:var(--muted);margin:0 0 20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700;color:#d7dfd1}.field input,.field select,.field textarea{width:100%;border:1px solid #354130;background:#11160f;color:var(--text);padding:12px 13px;border-radius:9px;font:14px Inter;outline:none}.field textarea{min-height:110px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}.form-footer{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}.fineprint{font-size:11px;color:var(--muted)}.success{display:none;margin-top:15px;padding:12px;border-radius:9px;background:#a7f36b15;border:1px solid #a7f36b50;color:var(--green);font-size:13px}
+    .join{margin:45px 0 70px;padding:38px;border:1px solid #a7f36b40;border-radius:20px;background:radial-gradient(ellipse at 100% 0,#a7f36b18,transparent 45%),#192218;display:flex;align-items:center;justify-content:space-between;gap:20px}.join h2{font:clamp(25px,3vw,36px) 'Russo One',sans-serif;margin:0 0 7px}.join p{color:var(--muted);margin:0;font-size:14px}
+    footer{border-top:1px solid #ffffff12;padding:27px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center}.foot b{font:19px 'Russo One',sans-serif;color:var(--text)}.foot b span{color:var(--green)}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:65px;gap:25px}.scene{min-height:300px}.cube-card{max-width:320px}.features{grid-template-columns:repeat(2,1fr)}.forms-layout{grid-template-columns:1fr}.navlinks{display:none}.stats{padding-bottom:40px}}
+    @media(max-width:520px){.wrap{width:min(100% - 26px,1120px)}.nav{height:66px}.brand{font-size:24px}.nav>.btn{padding:10px 12px;font-size:12px}.hero{padding:54px 0 40px}.lead{font-size:15px}.stats{gap:8px}.stat{padding:14px 11px}.stat b{font-size:19px}.stat span{font-size:10px}.features{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.form-card,.form-aside{padding:18px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.join{padding:25px;display:block}.join .btn{margin-top:20px;width:100%}.foot{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">Trick<span>Time</span></a>
+  <nav class="navlinks"><a href="#about">О сервере</a><a href="#community">Сообщество</a><a href="#requests">Обращения</a></nav>
+  <a class="btn btn-primary" href="#join">Начать играть ↗</a>
+</div></header>
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Твой мир начинается здесь</div>
+      <h1>ИГРАЙ.<br>СОЗДАВАЙ.<br><em>TRICKTIME.</em></h1>
+      <p class="lead">Minecraft — это больше, чем блоки. Собирай друзей, строй свой мир и становись частью нашего сообщества.</p>
+      <div class="actions"><a class="btn btn-primary" href="#join">⚒ Подключиться</a><a class="btn btn-ghost" href="#requests">Обратиться к администрации ↘</a></div>
+      <div class="server-status"><span class="dot"></span><span><strong>TrickTime</strong> · присоединяйся к приключению</span></div>
+    </div>
+    <div class="scene"><div class="scene-glow"></div><div class="cube-card"><div class="grid-bg"></div><div class="pixel-art"><i class="block b1"></i><i class="block b2"></i><i class="block b3"></i><i class="block b4"></i><i class="block b5"></i><i class="block b6"></i><i class="block b7"></i></div><div class="floating">ТВОЁ СЛЕДУЮЩЕЕ ПРИКЛЮЧЕНИЕ<b>начинается сейчас</b></div></div></div>
+  </div>
+  <div class="wrap stats">
+    <div class="stat"><b>24/7</b><span>Сообщество всегда рядом</span></div><div class="stat"><b>ТВОИ ИДЕИ</b><span>Предлагай — мы рассмотрим</span></div><div class="stat"><b>FAIR PLAY</b><span>Честная игра для всех</span></div>
+  </div>
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div><div class="kicker">Почему TrickTime?</div><h2>Твой сервер. Твои правила.</h2></div><p>Мы строим место, куда хочется возвращаться. Помоги сделать сервер лучше вместе с нами.</p></div>
+    <div class="features">
+      <article class="feature"><div class="icon">⛏</div><h3>Играй по-своему</h3><p>Исследуй мир, строй масштабные проекты и создавай собственные истории.</p></article>
+      <article class="feature"><div class="icon">♜</div><h3>Стань частью команды</h3><p>Общайся с игроками и участвуй в жизни сообщества.</p></article>
+      <article class="feature"><div class="icon">✦</div><h3>Предлагай идеи</h3><p>У тебя есть идея для сервера? Расскажи о ней администрации.</p></article>
+      <article class="feature"><div class="icon">⚖</div><h3>Справедливые решения</h3><p>Сообщай о нарушениях или подавай апелляцию на наказание.</p></article>
+    </div>
+  </div></section>
+  <section id="community"><div class="wrap"><div class="section-head"><div><div class="kicker">Помоги серверу расти</div><h2>Сообщество — это ты.</h2></div><p>Выбери нужный раздел и отправь обращение. Заполни форму подробно, чтобы команда могла быстрее разобраться.</p></div>
+    <div class="features">
+      <article class="feature"><div class="icon">💎</div><h3>Донат</h3><p>Поддержи развитие TrickTime и узнай о привилегиях.</p><a href="#requests" class="btn btn-ghost" style="margin-top:16px;padding:9px 12px">Подробнее ↗</a></article>
+      <article class="feature"><div class="icon">💡</div><h3>Предложения</h3><p>Поделись идеей новой функции, режима или события.</p><a href="#requests" data-tab="suggestion" class="btn btn-ghost tab-jump" style="margin-top:16px;padding:9px 12px">Предложить ↗</a></article>
+      <article class="feature"><div class="icon">🚨</div><h3>Жалобы</h3><p>Сообщи о нарушении правил, приложив доказательства.</p><a href="#requests" data-tab="complaint" class="btn btn-ghost tab-jump" style="margin-top:16px;padding:9px 12px">Пожаловаться ↗</a></article>
+      <article class="feature"><div class="icon">🛡</div><h3>Обжалование</h3><p>Считаешь наказание ошибочным? Расскажи свою ситуацию.</p><a href="#requests" data-tab="appeal" class="btn btn-ghost tab-jump" style="margin-top:16px;padding:9px 12px">Подать апелляцию ↗</a></article>
+    </div>
+  </div></section>
+  <section id="requests"><div class="wrap"><div class="section-head"><div><div class="kicker">Центр обращений</div><h2>Чем можем помочь?</h2></div><p>Форма пока работает в демонстрационном режиме. Перед публикацией подключи обработчик заявок — инструкция есть в README.</p></div>
+    <div class="forms-layout">
+      <aside class="form-aside"><div class="eyebrow">TrickTime support</div><h3>Мы на связи.</h3><p>Выбери категорию, укажи игровой ник и опиши вопрос как можно подробнее.</p><p>Не отправляй пароли или другие личные данные. Для жалоб и апелляций прикладывай ссылки на доказательства, если они есть.</p><div class="aside-note">⏱ Время ответа зависит от загруженности команды. Не отправляй одну заявку несколько раз.</div></aside>
+      <div class="form-card">
+        <div class="tabs" role="tablist"><button class="tab active" data-form="donate">💎 Донат</button><button class="tab" data-form="suggestion">💡 Предложения</button><button class="tab" data-form="complaint">🚨 Жалобы</button><button class="tab" data-form="appeal">🛡 Обжалование</button></div>
+        <h3 class="form-title" id="formTitle">Донат и привилегии</h3><p class="form-desc" id="formDesc">Оставь вопрос о покупке или доступных привилегиях.</p>
+        <form id="requestForm">
+          <input type="hidden" id="category" name="category" value="Донат">
+          <div class="form-grid">
+            <div class="field"><label for="nick">Игровой ник *</label><input id="nick" name="nick" placeholder="Например, Steve123" required maxlength="32"></div>
+            <div class="field"><label for="contact">Контакт для ответа *</label><input id="contact" name="contact" placeholder="Discord / Telegram" required maxlength="100"></div>
+            <div class="field full" id="subjectWrap"><label for="subject">Тема обращения *</label><input id="subject" name="subject" placeholder="Кратко опиши вопрос" required maxlength="120"></div>
+            <div class="field full"><label for="message">Подробности *</label><textarea id="message" name="message" placeholder="Напиши, что случилось или что ты предлагаешь..." required maxlength="3000"></textarea></div>
+            <div class="field full" id="evidenceWrap"><label for="evidence">Ссылка на доказательства (необязательно)</label><input id="evidence" name="evidence" type="url" placeholder="https://..."></div>
+          </div>
+          <div class="form-footer"><button class="btn btn-primary" type="submit">Отправить обращение ↗</button><span class="fineprint">Поля со * обязательны</span></div>
+          <div class="success" id="success" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </div></section>
+  <div class="wrap" id="join"><div class="join"><div><h2>Готов к приключению?</h2><p>Добавь сервер в Minecraft и увидимся в игре.</p></div><div><button class="btn btn-primary" id="copyIp">📋 Скопировать IP</button></div></div></div>
+</main>
+<footer><div class="wrap foot"><div><b>Trick<span>Time</span></b><div>© <span id="year"></span> TrickTime. Сделано для игроков.</div></div><div>Minecraft — товарный знак Mojang Studios. TrickTime не связан с Mojang или Microsoft.</div></div></footer>
+<script>
+  // Перед публикацией замени адрес в SERVER_IP на настоящий IP своего сервера.
+  const SERVER_IP = "PLAY.TRICKTIME.ME";
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const configs = {
+    donate:{title:'Донат и привилегии',desc:'Оставь вопрос о покупке или доступных привилегиях.',category:'Донат',subject:'Например: вопрос о привилегиях',evidence:false},
+    suggestion:{title:'Предложение для сервера',desc:'Расскажи, какую функцию или идею ты хочешь видеть на TrickTime.',category:'Предложение',subject:'Например: новый игровой режим',evidence:false},
+    complaint:{title:'Жалоба на игрока',desc:'Укажи суть нарушения и добавь ссылку на доказательства, если они есть.',category:'Жалоба',subject:'Ник нарушителя / тип нарушения',evidence:true},
+    appeal:{title:'Обжалование наказания',desc:'Укажи вид наказания, причину и почему решение стоит пересмотреть.',category:'Обжалование наказания',subject:'Например: бан от 17.10.2026',evidence:true}
+  };
+  function setForm(key){
+    const c=configs[key]; if(!c)return;
+    document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.form===key));
+    document.getElementById('formTitle').textContent=c.title;
+    document.getElementById('formDesc').textContent=c.desc;
+    document.getElementById('category').value=c.category;
+    document.getElementById('subject').placeholder=c.subject;
+    document.getElementById('evidenceWrap').style.display=c.evidence?'flex':'none';
+    document.getElementById('success').style.display='none';
+  }
+  document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>setForm(b.dataset.form)));
+  document.querySelectorAll('.tab-jump').forEach(a=>a.addEventListener('click',()=>setForm(a.dataset.tab)));
+  document.getElementById('copyIp').addEventListener('click',async()=>{
+    try{await navigator.clipboard.writeText(SERVER_IP);document.getElementById('copyIp').textContent='✓ IP скопирован: '+SERVER_IP}
+    catch(e){prompt('Скопируй IP сервера:',SERVER_IP)}
+  });
+  document.getElementById('requestForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const data=Object.fromEntries(new FormData(e.target).entries());
+    // Демо-режим: заявка не отправляется на сервер. Подключи Formspree или собственный backend.
+    const msg=`Демо-режим: форма проверена, но заявка НЕ отправлена.\n\nКатегория: ${data.category}\nНик: ${data.nick}\nКонтакт: ${data.contact}\nТема: ${data.subject}\nПодробности: ${data.message}\nДоказательства: ${data.evidence||'—'}`;
+    const box=document.getElementById('success');box.textContent=msg;box.style.display='block';
+  });
+</script>
+</body>
+</html>
