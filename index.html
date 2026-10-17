@@ -38,6 +38,16 @@
     .forms-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;align-items:start}.form-aside{padding:27px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(160deg,#263820,#171e14)}.form-aside h3{font:25px 'Russo One',sans-serif;margin:10px 0}.form-aside p{color:var(--muted);font-size:14px}.aside-note{margin-top:25px;padding-top:18px;border-top:1px solid #ffffff18;color:#c7d3bf;font-size:12px}
     .form-card{padding:26px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}.tab{border:1px solid var(--line);background:transparent;color:var(--muted);padding:10px 12px;border-radius:9px;font:600 12px Inter;cursor:pointer}.tab.active{background:var(--green);border-color:var(--green);color:#14200d}
     .form-title{font-size:21px;margin:0 0 5px}.form-desc{font-size:13px;color:var(--muted);margin:0 0 20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700;color:#d7dfd1}.field input,.field select,.field textarea{width:100%;border:1px solid #354130;background:#11160f;color:var(--text);padding:12px 13px;border-radius:9px;font:14px Inter;outline:none}.field textarea{min-height:110px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}.form-footer{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}.fineprint{font-size:11px;color:var(--muted)}.success{display:none;margin-top:15px;padding:12px;border-radius:9px;background:#a7f36b15;border:1px solid #a7f36b50;color:var(--green);font-size:13px}
+
+    .team-groups{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .team-group{padding:24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,#1c2419,#151a13)}
+    .team-group h3{font:21px 'Russo One',sans-serif;margin:0 0 17px}
+    .team-member{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-top:1px solid #ffffff12}
+    .team-member:first-of-type{border-top:0}
+    .team-avatar{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:11px;background:#a7f36b18;color:var(--green);font-size:19px}
+    .team-member b{display:block;font-size:14px;overflow-wrap:anywhere}
+    .team-member span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+    @media(max-width:650px){.team-groups{grid-template-columns:1fr}}
     .join{margin:45px 0 70px;padding:38px;border:1px solid #a7f36b40;border-radius:20px;background:radial-gradient(ellipse at 100% 0,#a7f36b18,transparent 45%),#192218;display:flex;align-items:center;justify-content:space-between;gap:20px}.join h2{font:clamp(25px,3vw,36px) 'Russo One',sans-serif;margin:0 0 7px}.join p{color:var(--muted);margin:0;font-size:14px}
     footer{border-top:1px solid #ffffff12;padding:27px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center}.foot b{font:19px 'Russo One',sans-serif;color:var(--text)}.foot b span{color:var(--green)}
     @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:65px;gap:25px}.scene{min-height:300px}.cube-card{max-width:320px}.features{grid-template-columns:repeat(2,1fr)}.forms-layout{grid-template-columns:1fr}.navlinks{display:none}.stats{padding-bottom:40px}}
@@ -47,7 +57,7 @@
 <body>
 <header><div class="wrap nav">
   <a class="brand" href="#home">Trick<span>Time</span></a>
-  <nav class="navlinks"><a href="#about">О сервере</a><a href="#community">Сообщество</a><a href="#requests">Обращения</a></nav>
+  <nav class="navlinks"><a href="#about">О сервере</a><a href="#community">Сообщество</a><a href="#team">Команда проекта</a><a href="#requests">Обращения</a></nav>
   <a class="btn btn-primary" href="#join">Начать играть ↗</a>
 </div></header>
 <main id="home">
@@ -81,6 +91,25 @@
       <article class="feature"><div class="icon">🛡</div><h3>Обжалование</h3><p>Считаешь наказание ошибочным? Расскажи свою ситуацию.</p><a href="#requests" data-tab="appeal" class="btn btn-ghost tab-jump" style="margin-top:16px;padding:9px 12px">Подать апелляцию ↗</a></article>
     </div>
   </div></section>
+
+  <section id="team"><div class="wrap">
+    <div class="section-head"><div><div class="kicker">Люди за проектом</div><h2>Команда TrickTime</h2></div><p>Знакомься с командой проекта — людьми, которые помогают развивать сервер и следить за порядком.</p></div>
+    <div class="team-groups">
+      <div class="team-group">
+        <h3>👑 Высший состав</h3>
+        <div class="team-member"><div class="team-avatar">👑</div><div><b>SE4R</b><span>Владелец</span></div></div>
+        <div class="team-member"><div class="team-avatar">⚙</div><div><b>pozuhe</b><span>Технический администратор</span></div></div>
+        <div class="team-member"><div class="team-avatar">✦</div><div><b>Fiks_Standiks</b><span>Администратор FT / MEDIA</span></div></div>
+        <div class="team-member"><div class="team-avatar">🛡</div><div><b>zonder</b><span>Администратор FT</span></div></div>
+        <div class="team-member"><div class="team-avatar">🛡</div><div><b>Trizubik</b><span>Администратор</span></div></div>
+      </div>
+      <div class="team-group">
+        <h3>🎮 FunTime режим</h3>
+        <div class="team-member"><div class="team-avatar">⚙</div><div><b>Qnocker_TT</b><span>Технический администратор</span></div></div>
+        <div class="team-member"><div class="team-avatar">⚙</div><div><b>BladeUnnpossible</b><span>Технический администратор</span></div></div>
+      </div>
+    </div>
+  </div></section>
   <section id="requests"><div class="wrap"><div class="section-head"><div><div class="kicker">Центр обращений</div><h2>Чем можем помочь?</h2></div><p>Форма пока работает в демонстрационном режиме. Перед публикацией подключи обработчик заявок — инструкция есть в README.</p></div>
     <div class="forms-layout">
       <aside class="form-aside"><div class="eyebrow">TrickTime support</div><h3>Мы на связи.</h3><p>Выбери категорию, укажи игровой ник и опиши вопрос как можно подробнее.</p><p>Не отправляй пароли или другие личные данные. Для жалоб и апелляций прикладывай ссылки на доказательства, если они есть.</p><div class="aside-note">⏱ Время ответа зависит от загруженности команды. Не отправляй одну заявку несколько раз.</div></aside>
@@ -102,12 +131,12 @@
       </div>
     </div>
   </div></section>
-  <div class="wrap" id="join"><div class="join"><div><h2>Готов к приключению?</h2><p>Добавь сервер в Minecraft и увидимся в игре.</p></div><div><button class="btn btn-primary" id="copyIp">📋 Скопировать IP</button></div></div></div>
+  <div class="wrap" id="join"><div class="join"><div><h2>Готов к приключению?</h2><p>Добавь сервер в Minecraft и увидимся в игре.</p><p style="margin-top:10px;color:var(--green);font-weight:800">tricktime.mc-join.me</p></div><div><button class="btn btn-primary" id="copyIp">📋 Скопировать IP</button></div></div></div>
 </main>
 <footer><div class="wrap foot"><div><b>Trick<span>Time</span></b><div>© <span id="year"></span> TrickTime. Сделано для игроков.</div></div><div>Minecraft — товарный знак Mojang Studios. TrickTime не связан с Mojang или Microsoft.</div></div></footer>
 <script>
   // Перед публикацией замени адрес в SERVER_IP на настоящий IP своего сервера.
-  const SERVER_IP = "PLAY.TRICKTIME.ME";
+  const SERVER_IP = "tricktime.mc-join.me";
   document.getElementById('year').textContent = new Date().getFullYear();
   const configs = {
     donate:{title:'Донат и привилегии',desc:'Оставь вопрос о покупке или доступных привилегиях.',category:'Донат',subject:'Например: вопрос о привилегиях',evidence:false},
